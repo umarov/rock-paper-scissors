@@ -1,0 +1,12 @@
+<h1>Rock Paper Scissors Game</h1>
+<p>Let's start playing </p>
+<%= form_tag("/throw", method: "post") do%>
+	Pick your sign:
+	<select name="sign">
+		<option value=<%=@signs[0]%>><%=@signs[0]%></option>
+		<option value=<%=@signs[1]%>><%=@signs[1]%></option>
+		<option value=<%=@signs[2]%>><%=@signs[2]%></option>
+	</select>
+	<%= submit_tag("Play")%>
+<% end %>
+
